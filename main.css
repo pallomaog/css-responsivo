@@ -1,0 +1,186 @@
+@font-face{
+    font-family: Avenir;
+    src: url(./fonts/Avenir-Bold.woff2);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Avenir, sans-serif;
+}
+
+.container {
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+body{
+    background-color: #202020;
+    color: #fff;
+}
+
+p{
+    text-align:justify;
+}
+
+header {
+    font-size: 24px;
+    padding: 16px 0;
+    background: linear-gradient(90deg, rgba(255,51,51,1) 0%, rgba(255,61,142,1) 49%, rgba(219,110,255,1) 100%);
+    text-shadow: 1px 1px 12px #202020;	
+}
+
+header .container {
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    display: flex;
+}
+
+h1{
+    color: #fff;
+}
+
+header li {
+    list-style: none;
+    display: inline;
+    margin-right: 16px;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+header li a {
+    color: #fff;
+    text-decoration: none;
+	
+}
+.container-flex {
+    display: flex;
+}
+
+#sobre-a-loja img{
+    max-width: 400px;
+    margin-right: 24px;
+    border-radius: 15px;
+    box-shadow: 0px 2px 10px black;
+}
+
+section {
+    padding: 48px 0;
+}
+
+section h2 {
+    padding: 16px;
+    margin-bottom: 32px;
+    border-bottom: 2px solid #ff0062;
+}
+
+.lista-produtos {
+    display: grid;
+    grid-template-columns: repeat(4, 24%);
+}
+
+.lista-produtos li {
+    list-style: none;
+    max-width: 100%;
+    padding: 5px;
+    margin-bottom: 24px;
+}
+
+.lista-produtos li img {
+    max-width: 100%;
+    padding: 5px;
+    box-shadow: 0px 2px 10px rgb(0, 0, 0);
+}
+
+.lista-produtos li h3 {
+    margin: 16px 0;
+}
+
+.preco {
+    margin: 16px 0;
+    display: block;
+}
+
+.buttonlink {
+    display: block;
+    width: 90%;
+    padding: 16px 0;
+    border: none;
+    background-color: #cc3071;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 6px;
+    text-align: center;
+    text-decoration: none;
+    transition: 1s;
+}
+
+.buttonlink:hover{
+    box-shadow: 0px 4px 20px black;
+    text-shadow: 0px 0px 8px white;
+    transform: scale(1.1);
+
+
+
+@media screen and (max-width: 819px) {
+    .container {
+        width: 90%;
+    }
+    
+    .container-flex {
+        display: block;
+    }
+
+    #sobre-a-loja img {
+        max-width: 100%;
+        display: flex;
+    }
+
+    .lista-produtos {
+        display: inline;
+    }
+
+    .lista-produtos li h3, p, .buttonlink {
+        margin-left: 16px;
+    }
+    
+    .preco {
+        padding-left: 16px;
+    }
+    
+}
+
+@media screen and (min-width: 820px) and (max-width: 1180px) {
+    .container {
+        width: 90%;
+    }
+    
+    .container-flex {
+        display: flex;
+        flex-direction:column;
+    }
+
+    #sobre-a-loja img {
+        max-width: 100%;
+    }
+
+    .lista-produtos {
+        display: grid;
+        grid-template-columns: repeat(2, 48%);
+    }
+    
+    .lista-produtos li h3, p, .buttonlink {
+        margin-left: 16px;
+    }
+    
+    .preco {
+        padding-left: 16px;
+    }
+
+}
